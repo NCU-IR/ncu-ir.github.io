@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>校務研究公開資訊｜國立中央大學校務研究辦公室</title>
+<style>
+  :root { --navy:#0f2770; --blue:#1d4f9c; --ink:#2b2b2b; --muted:#6b7280; --line:#e3e6eb; --soft:#f4f6f9; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif; color:var(--ink); background:#fff; font-size:16px; }
+  a { color:var(--blue); }
+  .skip { position:absolute; left:-999px; } .skip:focus { left:8px; top:8px; background:#fff; padding:8px; z-index:9; }
+  .wrap { max-width:1440px; margin:0 auto; padding:0 24px; }
+
+  header { background:var(--navy); border-bottom:4px solid #2a7fc4; }
+  .top { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 24px; }
+  .logo img { height:60px; display:block; }
+  .toplinks a { color:#fff; text-decoration:none; font-size:16px; margin-left:24px; opacity:.92; }
+  .toplinks a:hover { opacity:1; text-decoration:underline; }
+  .sample { background:#fff8e1; color:#7a5a00; font-size:13px; padding:6px 0; text-align:center; }
+
+  main.wrap { padding-top:24px; padding-bottom:56px; }
+  .hero { text-align:center; margin:12px 0 32px; }
+  .hero h1 { margin:0; font-size:32px; letter-spacing:4px; color:var(--navy); }
+  .hero p { margin:10px 0 0; color:var(--muted); font-size:15px; letter-spacing:1px; }
+  .tiles { display:grid; grid-template-columns:repeat(4, 1fr); gap:28px; max-width:980px; margin:0 auto; }
+  .tile { display:block; text-decoration:none; text-align:center; color:var(--ink); }
+  .tile img { width:100%; display:block; border-radius:6px; transition:transform .15s, box-shadow .15s; }
+  .tile:hover img, .tile:focus img { transform:translateY(-4px); box-shadow:0 10px 24px rgba(15,39,112,.22); }
+  .tile .count { display:block; font-size:14px; color:var(--muted); margin-top:8px; }
+
+  .crumb { font-size:14px; color:var(--muted); margin-bottom:14px; }
+  .crumb a { text-decoration:none; }
+  .head { display:flex; align-items:center; gap:14px; margin-bottom:14px; flex-wrap:wrap; }
+  .head h1 { margin:0; font-size:26px; color:var(--navy); flex:1; }
+  .btn { font:inherit; font-size:15px; border:1px solid var(--blue); color:var(--blue); background:#fff; border-radius:4px; padding:7px 14px; cursor:pointer; text-decoration:none; }
+  .btn:hover { background:var(--blue); color:#fff; }
+
+  .tabs { display:flex; align-items:stretch; background:var(--soft); border:1px solid var(--line); border-radius:6px; margin-bottom:12px; }
+  .tabs .arrow { flex:none; width:44px; border:0; background:transparent; color:var(--navy); font-size:26px; cursor:pointer; }
+  .tabs .arrow:hover { background:#e6eaf0; }
+  .tablist { display:flex; overflow-x:auto; scroll-behavior:smooth; scrollbar-width:none; flex:1; }
+  .tablist::-webkit-scrollbar { display:none; }
+  .tablist a { flex:none; width:180px; padding:14px 16px; color:#333; text-decoration:none; font-size:17px; line-height:1.4;
+               border-right:1px solid var(--line); display:flex; align-items:center; }
+  .tablist a:hover { background:#e6eaf0; }
+  .tablist a[aria-current="true"] { background:var(--navy); color:#fff; font-weight:700; }
+
+  .tip { display:flex; align-items:center; gap:8px; background:#eef4fb; border-left:4px solid var(--blue); padding:10px 14px; margin-bottom:14px; font-size:15px; }
+  .linkbtn { font:inherit; border:0; background:none; color:var(--blue); text-decoration:underline; cursor:pointer; padding:0; }
+  .chart-title { font-size:20px; margin:4px 0 10px; }
+  .viz { border:1px solid var(--line); border-radius:6px; padding:12px; overflow:hidden; }
+  .viz .tableauPlaceholder { margin:0 auto; }
+  .meta { font-size:14px; color:var(--muted); margin-top:10px; }
+
+  dialog { width:min(960px,94vw); height:min(88vh,960px); padding:0; border:0; border-radius:8px; }
+  dialog::backdrop { background:rgba(0,0,0,.5); }
+  .dhead { display:flex; justify-content:space-between; align-items:center; padding:10px 14px; background:var(--navy); color:#fff; }
+  .dhead .btn { border-color:#fff; color:#fff; background:transparent; }
+  dialog iframe { width:100%; height:calc(100% - 54px); border:0; }
+  footer { background:var(--navy); color:#fff; font-size:14px; text-align:center; padding:22px 0; }
+  @media (max-width:760px) { .tiles { grid-template-columns:repeat(2, 1fr); gap:16px; } .toplinks { display:none; } .wrap { padding:0 16px; } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">跳到主要內容</a>
+<header>
+  <div class="top">
+    <a class="logo" href="https://ir.ncu.edu.tw/" title="回到校務研究辦公室首頁"><img src="logo_white.png" alt="國立中央大學 校務研究辦公室"></a>
+    <nav class="toplinks" aria-label="網站連結"><a href="#/">校務研究公開資訊</a><a href="https://ir.ncu.edu.tw/">校務研究辦公室首頁</a></nav>
+  </div>
+</header>
+<div class="sample">樣品版：分類與名稱依辦公室分類檔；點閱數、更新日為 Tableau Public 資料</div>
+<main id="main" class="wrap" tabindex="-1"></main>
+<footer>國立中央大學 校務研究辦公室｜Office of Institutional Research, National Central University</footer>
+
+<dialog id="help" aria-labelledby="helpTitle">
+  <div class="dhead"><strong id="helpTitle">❓ 一分鐘上手！圖表互動與數據導出說明</strong>
+    <span><a class="btn" href="操作說明.pdf" download>下載 PDF</a> <button class="btn" id="closeHelp">關閉</button></span></div>
+  <iframe title="圖表操作說明 PDF" src="about:blank"></iframe>
+</dialog>
+
+<script src="data.js"></script>
+<script src="meta.js"></script>
+<script>
+// 分類、名稱、順序直接讀辦公室的雲端檔（怡惠改了，網頁重新整理就更新）
+const SHEET = 'https://docs.google.com/spreadsheets/d/10i7yVwZtTe_0oWZVRWAtChd77O3TVaED/export?format=csv';
+const HIDE = ['其他', '高教深耕', '世界大學排名'];
+
+function parseCSV(text) {
+  const rows = []; let row = [], cell = '', q = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (q) {
+      if (ch === '"' && text[i + 1] === '"') { cell += '"'; i++; }
+      else if (ch === '"') q = false;
+      else cell += ch;
+    } else if (ch === '"') q = true;
+    else if (ch === ',') { row.push(cell); cell = ''; }
+    else if (ch === '\n' || ch === '\r') {
+      if (ch === '\r' && text[i + 1] === '\n') i++;
+      row.push(cell); rows.push(row); row = []; cell = '';
+    } else cell += ch;
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  return rows;
+}
+
+function fromSheet(text) {
+  const [head, ...rows] = parseCSV(text);
+  const col = name => head.indexOf(name);  // 用欄名找，她調欄位順序也不會壞
+  const C = { cat: col('分類'), name: col('網頁表冊名稱'), short: col('網頁表冊名稱_簡稱'), url: col('網址'), size: col('尺寸') };
+  const out = [];
+  for (const r of rows) {
+    const cat = (r[C.cat] || '').trim();
+    const m = (r[C.url] || '').match(/\/views\/([^/]+)\/([^?]+)/);
+    if (!cat || HIDE.includes(cat) || !m) continue;
+    const [w, h] = (r[C.size] || '1000×827').split('×').map(Number);
+    const meta = META[m[1]] || {};
+    out.push({ id: m[1], sheet: m[2], w, h, date: meta.date || '', views: meta.views || 0,
+      group: cat.startsWith('校際_') ? '校際比較' : cat, sub: cat.startsWith('校際_') ? cat.slice(3) : '',
+      title: r[C.name].trim(), short: (r[C.short] || r[C.name]).trim() });
+  }
+  return out;
+}
+
+const GROUPS = ['學生類', '教職類', '研究類', '校務類', '財務類', '國際交流', '校際比較'];
+const SUBS = ['學生類', '教職類', '研究類', '校務類', '財務類'];
+const main = document.getElementById('main');
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const link = (...p) => '#/' + p.map(encodeURIComponent).join('/');
+
+function tile(name, href, n) {
+  return `<a class="tile" href="${href}"><img src="tiles_blue/${name}.png" alt="${name}"><span class="count">${n} 張圖表</span></a>`;
+}
+
+function home() {
+  main.innerHTML = `<div class="hero"><h1>校務研究公開資訊</h1>
+    <p>校務公開資訊・數據歷年趨勢・校際比較・適性化互動儀表板</p></div>
+    <div class="tiles">${GROUPS.map(g => tile(g, link(g), CHARTS.filter(c => c.group === g).length)).join('')}</div>`;
+}
+
+function compareHome() {
+  main.innerHTML = `<nav class="crumb"><a href="#/">首頁</a> › 校際比較</nav>
+    <div class="hero"><h1>校際比較</h1></div>
+    <div class="tiles">${SUBS.map(s => tile(s, link('校際比較', s),
+      CHARTS.filter(c => c.group === '校際比較' && c.sub === s).length)).join('')}</div>`;
+}
+
+// 看過的圖留在頁面上（藏起來），切回去不用重新載入
+let loaded = {};
+
+function showChart(c) {
+  const box = document.getElementById('vizbox');
+  Object.values(loaded).forEach(d => d.style.display = 'none');
+  document.getElementById('ctitle').textContent = c.title;
+  document.getElementById('cmeta').textContent =
+    `發佈更新日：${c.date}　點閱數：${c.views.toLocaleString()}（Tableau Public 累計，每日更新）`;
+  if (loaded[c.id]) { loaded[c.id].style.display = ''; return; }
+
+  // 圖表放大到填滿版面寬度（Tableau 儀表板是固定尺寸，不放大字和篩選器會很小）
+  const k = Math.min(1.5, (box.clientWidth - 24) / c.w);
+  const img = `https://public.tableau.com/static/images/${c.id.slice(0, 2)}/${c.id}/${c.sheet}/1.png`;
+  const wrap = document.createElement('div');
+  wrap.innerHTML = `<div class="tableauPlaceholder" id="viz_${c.id}" style="position:relative;zoom:${k};width:${c.w}px" aria-label="${esc(c.title)} 視覺化圖表">
+    <noscript><img alt="${esc(c.title)} 統計圖表" src="${img}"></noscript>
+    <object class="tableauViz" style="display:none;width:${c.w}px;height:${c.h}px" title="${esc(c.title)} 圖表">
+      <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"><param name="embed_code_version" value="3">
+      <param name="site_root" value=""><param name="name" value="${c.id}/${c.sheet}">
+      <param name="tabs" value="no"><param name="toolbar" value="yes"><param name="static_image" value="${img}">
+      <param name="animate_transition" value="yes"><param name="display_static_image" value="yes">
+      <param name="display_spinner" value="yes"><param name="display_overlay" value="yes">
+      <param name="display_count" value="yes"><param name="language" value="zh-TW">
+    </object></div>`;
+  box.appendChild(wrap);
+  loaded[c.id] = wrap;
+  const s = document.createElement('script');
+  s.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+  wrap.appendChild(s);
+}
+
+function page(group, sub, id) {
+  const rows = CHARTS.filter(c => c.group === group && (!sub || c.sub === sub));
+  if (!rows.length) return home();
+  const first = rows.find(x => x.id === id) || rows[0];
+  const name = sub ? `${group}｜${sub}` : group;
+  const crumb = sub ? `<a href="#/">首頁</a> › <a href="${link(group)}">${group}</a> › ${sub}` : `<a href="#/">首頁</a> › ${group}`;
+  const href = x => link(group, sub || '-', x.id);
+  loaded = {};
+  main.innerHTML = `<nav class="crumb">${crumb}</nav>
+    <div class="head"><a class="btn" href="${sub ? link(group) : '#/'}">← 返回${sub ? group : '首頁'}</a>
+      <h1>${name}</h1><button class="btn" data-help aria-haspopup="dialog">❓ 操作說明</button></div>
+    <nav class="tabs" aria-label="${name} 圖表選單">
+      <button class="arrow" data-scroll="-1" aria-label="選單往左">‹</button>
+      <div class="tablist">${rows.map(x => `<a href="${href(x)}" data-id="${x.id}" title="${esc(x.title)}">${esc(x.short || x.title)}</a>`).join('')}</div>
+      <button class="arrow" data-scroll="1" aria-label="選單往右">›</button>
+    </nav>
+    <div class="tip">💡 小提示：<button class="linkbtn" data-help>一分鐘上手！圖表互動與數據導出說明</button></div>
+    <h2 class="chart-title" id="ctitle"></h2>
+    <div class="viz" id="vizbox"></div>
+    <p class="meta" id="cmeta"></p>`;
+
+  const list = main.querySelector('.tablist');
+  const select = (c, a) => {
+    list.querySelectorAll('a').forEach(x => x.removeAttribute('aria-current'));
+    a.setAttribute('aria-current', 'true');
+    // 只在選到的那格不在畫面內時才捲，選單不會整排亂跳
+    const l = list.getBoundingClientRect(), r = a.getBoundingClientRect();
+    if (r.left < l.left || r.right > l.right) list.scrollLeft += r.left - l.left - 20;
+    showChart(c);
+  };
+  list.addEventListener('click', e => {
+    const a = e.target.closest('a[data-id]');
+    if (!a) return;
+    e.preventDefault();
+    history.replaceState(null, '', a.getAttribute('href'));  // 換網址但不重畫整頁
+    select(rows.find(x => x.id === a.dataset.id), a);
+  });
+  select(first, list.querySelector(`a[data-id="${first.id}"]`));
+}
+
+function route() {
+  const p = location.hash.replace(/^#\/?/, '').split('/').filter(Boolean).map(decodeURIComponent);
+  if (!p.length) home();
+  else if (p[0] === '校際比較') p.length === 1 ? compareHome() : page(p[0], p[1], p[2]);
+  else page(p[0], '', p[2]);
+  window.scrollTo(0, 0);
+}
+
+const dlg = document.getElementById('help');
+document.addEventListener('click', e => {
+  const a = e.target.closest('[data-scroll]');
+  if (a) { const l = a.parentNode.querySelector('.tablist'); l.scrollLeft += a.dataset.scroll * l.clientWidth * 0.8; }
+  if (e.target.closest('[data-help]')) { dlg.querySelector('iframe').src = '操作說明.pdf'; dlg.showModal(); }
+});
+document.getElementById('closeHelp').onclick = () => dlg.close();
+window.addEventListener('hashchange', route);
+// 讀不到雲端檔時，退回上次產生的 data.js，網站不會整個掛掉
+fetch(SHEET).then(r => r.ok ? r.text() : Promise.reject(r.status))
+  .then(t => { const rows = fromSheet(t); if (rows.length) CHARTS = rows; })
+  .catch(e => console.warn('讀不到雲端分類檔，改用備份資料', e))
+  .finally(route);
+</script>
+</body>
+</html>
